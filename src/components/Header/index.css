@@ -1,0 +1,18 @@
+
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    height: 15vh;
+    width: 100vw;
+    background-color: #385dd6;
+    background-size: cover;
+}
+.heading{
+    font-size: 30px;
+    font-family: "Roboto";
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 15px;
+    font-weight: bold;
+}
