@@ -14,57 +14,74 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+Recipe List App
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Overview
 
-### `npm run build`
+This is a React application that displays a list of recipes with filtering, sorting, and search functionalities. The app allows users to:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Search recipes by name, chef, or description.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Sort recipes by date or rating.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Apply filters based on attributes, meal type, or dish type.
 
-### `npm run eject`
+Clear all applied filters.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Display recipes in a visually appealing grid layout.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Features Implemented
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. State Management
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Used useState to manage the list of recipes, search query, sorting option, and filters.
 
-## Learn More
+setRecipes updates the state dynamically when search, sort, or filter options are changed.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Search Functionality
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Users can type a query into the search bar, and the app will filter recipes accordingly.
 
-### Code Splitting
+3. Sorting Mechanism
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Sorts recipes by:
 
-### Analyzing the Bundle Size
+Newest (latest upload date)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Oldest
 
-### Making a Progressive Web App
+Highest rating
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Lowest rating
 
-### Advanced Configuration
+4. Filter System
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Users can filter by:
 
-### Deployment
+Attributes (e.g., Spicy, Vegan)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Meal Type (e.g., Breakfast, Dinner)
 
-### `npm run build` fails to minify
+Dish Type (e.g., Main Course, Dessert)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Clicking a filter toggles its selection.
+
+The "Clear Filters" button resets all applied filters.
+
+5. Image Rendering Fixes
+
+Updated RecipeCard.js to ensure images render correctly.
+
+Added an onError fallback to load a default image if the specified one is missing.
+
+6. CSS Styling Enhancements
+
+Improved layout with grid for responsive design.
+
+Styled search bar, filter buttons, and recipe cards.
+
+Applied object-fit: cover to images to prevent distortion.
+
+7. Deployment:
+   I used to deploy my project in vercel
+  webiste link: https://recipe-contest-page-eight.vercel.app/
